@@ -1,0 +1,105 @@
+Valentine.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Question For You ❤️</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a001f, #4b002d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Georgia', serif;
+    color: #fff;
+    text-align: center;
+  }
+  .box {
+    background: rgba(0,0,0,0.4);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(255,0,100,0.4);
+    max-width: 400px;
+    animation: fadeIn 2s;
+  }
+  button {
+    padding: 12px 30px;
+    font-size: 18px;
+    margin: 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  #yes {
+    background: #ff2e63;
+    color: white;
+  }
+  #no {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+  }
+  img {
+    width: 260px;
+    margin-top: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255,100,150,0.6);
+  }
+  @keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.95);}
+    to {opacity: 1; transform: scale(1);}
+  }
+</style>
+</head>
+<body>
+
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio>
+
+<div class="box" id="question">
+  <h1>Will you be my Valentine?</h1>
+  <p style="opacity:0.8;">This moment has been waiting for you…</p>
+  <button id="yes" onclick="sayYes()">Yes</button>
+  <button id="no" onclick="sayNo()">No</button>
+</div>
+
+<div class="box" id="love" style="display:none;">
+  <h1>You chose us ❤️</h1>
+  <img src="https://i.imgur.com/fHyEMsl.jpg" alt="Love">
+  <p style="font-size:18px; margin-top:20px; line-height:1.5;">
+    Prathamesh… (my Babduu)  
+    I didn’t choose you by accident.  
+    I chose you because with you, I feel seen, safe, and wanted in ways I can’t explain.  
+    In a world full of options, I still pick you.  
+    Again. And again. And again.  
+    Today, I’m choosing you —  
+    not just for Valentine’s Day,  
+    but for all the ordinary days that matter the most. ❤️
+  </p>
+</div>
+
+<script>
+function sayNo() {
+  const msgs = [
+    "Think again… my heart is right here ❤️",
+    "Don’t break the story yet…",
+    "Some choices are destiny.",
+    "You know this isn’t the end 😉"
+  ];
+  alert(msgs[Math.floor(Math.random() * msgs.length)]);
+}
+
+function sayYes() {
+  document.getElementById("question").style.display = "none";
+  document.getElementById("love").style.display = "block";
+}
+</script>
+
+</body>
+</html>
+
+
