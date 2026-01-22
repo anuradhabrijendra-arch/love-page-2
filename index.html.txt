@@ -1,0 +1,72 @@
+
+Love note
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You 💖</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #fff0f5;
+            padding: 50px;
+        }
+        img {
+            max-width: 300px;
+            border-radius: 20px;
+            margin: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <h1>Special for You 💖</h1>
+    <img src="your_photo.jpg" alt="Your Photo">
+    <img src="his_photo.jpg" alt="His Photo">
+    <br>
+    <button onclick="startMessages()">Click Me 💌</button>
+
+    <script>
+        const messages = [
+            "I love you, mera rasmalai! 🍨",
+            "Thanks for coming into my life 🌸",
+            "Wanna spend the best time with you 💞",
+            "Always be mine, never try to impress other girls, remember you have me ❤️"
+        ];
+
+        function startMessages() {
+            let index = 0;
+
+            function showNext() {
+                if(index < messages.length){
+                    alert(messages[index]);
+                    index++;
+                    setTimeout(showNext, 500); // 0.5 sec delay between popups
+                }
+            }
+
+            showNext();
+        }
+    </script>
+</body>
+</html>
+
